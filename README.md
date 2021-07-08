@@ -37,25 +37,24 @@ cmake .. && make
 
 # Getting Started
 ### Train
-in `config/nuScenes.json` define dataset path:
-```
-"data_dir": [your_dataset_path],
-```
-To train a new model, we provide `train.py`, which can be used as follows:
+- define  `data_dir` in `config/nuScenes.json`
+- to train a new model:
 
 ```
 python3 train.py --pretrain <optional_pretrained_model_path> python3 train.py --config config/nuScenes.json
 ```
 
 ### Evaluate
-To evaluate a trained model(by Kaiwen), use `eval.py` with the following format (do not forget to define dataset path in `ckpt/nuScenes.json`):
+- check&define  `data_dir` in `ckpt/nuScenes.json`
+- to evaluate a trained model(by Kaiwen):
 
 ```
 python3 eval.py --pretrain ckpt/lastest.pt --config ckpt/nuScenes.json
 ```
 
 ### Generate descriptors for place recognition
-Do not forget to define dataset path `IMG_DIR` and `CSV_DIR`
+- define `IMG_DIR` and `CSV_DIR` in `desc.py` 
+- check&define `data_dir` in `ckpt/nuScenes.json`
 ```
-python3 desc.py --config logs/nuScenes.json --pretrain logs/latest.pt
+python3 desc.py --config ckpt/nuScenes.json --pretrain ckpt/latest.pt
 ```
