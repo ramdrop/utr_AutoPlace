@@ -8,6 +8,12 @@
 | [MC-RANSAC](https://arxiv.org/abs/2011.03512)       | Unsupervised (HC) | 3.3204                  | 10.95                                        |
 | [HERO](https://arxiv.org/abs/2105.14152) (Ours)     | Unsupervised (L)  | 1.9879                  | 6.524                                        |
 
+# Trained results on nuScenes
+ckpt-1:
+![ckpt-1](/ckpt-1/tb.png)
+
+ckpt-2:
+![ckpt-2](/ckpt-2/tb.png)
 # Build Instrucions
 We provide a Dockerfile which can be used to build a docker image with all the required dependencies installed. It is possible to build and link all required dependencies using cmake, but we do not provide instrucions for this. To use NVIDIA GPUs within docker containers, you'll need to install [nvidia-docker](https://github.com/NVIDIA/nvidia-docker)
 
@@ -38,15 +44,15 @@ cmake .. && make
 # Getting Started
 ### Train
 - define  `data_dir` in `config/nuScenes.json`
-- to train a new model:
+- train a new model:
 
 ```
-python3 train.py --pretrain <optional_pretrained_model_path> python3 train.py --config config/nuScenes.json
+python3 train.py --config config/nuScenes.json
 ```
 
 ### Evaluate
-- check&define  `data_dir` in `ckpt/nuScenes.json`
-- to evaluate a trained model(by Kaiwen):
+- check & define  `data_dir` in `ckpt/nuScenes.json`
+- evaluate a trained model(by Kaiwen):
 
 ```
 python3 eval.py --pretrain ckpt/lastest.pt --config ckpt/nuScenes.json
@@ -54,7 +60,7 @@ python3 eval.py --pretrain ckpt/lastest.pt --config ckpt/nuScenes.json
 
 ### Generate descriptors for place recognition
 - define `IMG_DIR` and `CSV_DIR` in `desc.py` 
-- check&define `data_dir` in `ckpt/nuScenes.json`
+- check & define `data_dir` in `ckpt/nuScenes.json`
 ```
 python3 desc.py --config ckpt/nuScenes.json --pretrain ckpt/latest.pt
 ```
