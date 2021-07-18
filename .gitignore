@@ -23,3 +23,7 @@ models/*
 *.pickle
 events*
 *jpg
+preprocess_nuscenes/nusc
+*.npy
+*pt
+!latest.pt

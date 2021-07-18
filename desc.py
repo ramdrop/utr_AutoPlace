@@ -24,7 +24,7 @@ def get_folder_from_file_path(path):
     return newpath
 
 '''
-python3 desc.py --config logs/nuScenes.json --pretrain logs/latest.pt
+python3 desc.py --config ckpt-3/nuScenes.json --pretrain ckpt-3/latest.pt
 '''
 
 if __name__ == '__main__':

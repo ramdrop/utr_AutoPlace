@@ -89,7 +89,6 @@ class OxfordDataset(Dataset):
         self.seq_idx_range = {}
         self.frames = []
         self.seq_lens = []
-        set_trace()
         for seq in self.sequences:
             seq_frames = get_frames(self.data_dir + seq + '/radar/')
             seq_frames = self.get_frames_with_gt(seq_frames, self.data_dir + seq + '/gt/radar_odometry.csv')    # ['1526915243572566.jpg', '1526915244017706.jpg',..]
