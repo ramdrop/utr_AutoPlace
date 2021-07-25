@@ -24,6 +24,7 @@ models/*
 events*
 *jpg
 preprocess_nuscenes/nusc
+preprocess_nuscenes/nusc_comp
 *.npy
 *pt
 !latest.pt

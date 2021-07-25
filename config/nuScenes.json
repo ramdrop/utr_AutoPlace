@@ -1,8 +1,8 @@
 {
     "model": "UnderTheRadar",
     "dataset": "oxford",
-    "data_dir": "/workspace/robocar/hero_nusc/preprocess_nuscenes/nusc/",
-    "log_dir": "/workspace/robocar/hero_nusc/ckpt-3/",
+    "data_dir": "/workspace/robocar/hero_nusc/preprocess_nuscenes/nusc_comp/",
+    "log_dir": "/workspace/robocar/hero_nusc/ckpt-pengen/",
     "gpuid": "cuda:1",
     "radar_resolution": 0.0432,
     "cart_resolution": 1.0,

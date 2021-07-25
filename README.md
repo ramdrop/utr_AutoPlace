@@ -14,6 +14,14 @@ ckpt-1:
 
 ckpt-2:
 ![ckpt-2](/ckpt-2/tb.png)
+
+
+ckpt-3:
+![ckpt-3](/ckpt-3/tb.png)
+
+
+ckpt-pengen:
+![ckpt-pengen](/ckpt-pengen/tb.png)
 # Build Instrucions
 We provide a Dockerfile which can be used to build a docker image with all the required dependencies installed. It is possible to build and link all required dependencies using cmake, but we do not provide instrucions for this. To use NVIDIA GPUs within docker containers, you'll need to install [nvidia-docker](https://github.com/NVIDIA/nvidia-docker)
 
@@ -62,5 +70,5 @@ python3 eval.py --pretrain ckpt/lastest.pt --config ckpt/nuScenes.json
 - define `IMG_DIR` and `CSV_DIR` in `desc.py` 
 - check & define `data_dir` in `ckpt/nuScenes.json`
 ```
-python3 desc.py --config ckpt/nuScenes.json --pretrain ckpt/latest.pt
+python3 desc.py --config ckpt-3/nuScenes.json --pretrain ckpt-3/latest.pt
 ```
