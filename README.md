@@ -1,4 +1,4 @@
-### HERO (Hybrid-Estimate Radar Odometry)
+### train&evaluate UnderTheRadar on nuScene radar dataset
 
 This repo is developed based on [utiasASRL/hero_radar_odometry](https://github.com/utiasASRL/hero_radar_odometry).
 
