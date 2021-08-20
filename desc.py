@@ -46,8 +46,8 @@ if __name__ == '__main__':
     model.eval()
 
     # ------------------------------------- output embeddings ------------------------------------ #
-    IMG_DIR = '/workspace/robocar/7n5s_xy11/img'
-    CSV_DIR = '/workspace/robocar/7n5s_xy11'
+    IMG_DIR = 'nuscenes_dataset/7n5s_xy11/img'
+    CSV_DIR = 'nuscenes_dataset/7n5s_xy11'
 
     database_list = []
     csv_reader = csv.reader(open(os.path.join(CSV_DIR, 'database.csv')))

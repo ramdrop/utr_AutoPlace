@@ -28,3 +28,4 @@ preprocess_nuscenes/nusc_comp
 *.npy
 *pt
 !latest.pt
+nuscenes_dataset/

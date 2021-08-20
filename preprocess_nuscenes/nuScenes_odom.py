@@ -3,11 +3,10 @@ import os
 import csv
 import shutil
 import argparse
-import tqdm
 
 parser = argparse.ArgumentParser(description='Process some integers.')
-parser.add_argument('--save_dir', type=str, default='./nusc/', help='root dir for saving data')
-parser.add_argument('--source_img_dir', type=str, default='/LOCAL/ramdrop/dataset/mmrec_dataset/7n5s_xy11/img', help='image source dir')
+parser.add_argument('--save_dir', type=str, default='./../nuscenes_dataset/clips', help='root dir for saving data')
+parser.add_argument('--source_img_dir', type=str, default='./../nuscenes_dataset/7n5s_xy11/img', help='image source dir')
 parser.add_argument('--scene_pose_dict',
                     type=str,
                     default='scene_pose.npy',
@@ -37,7 +36,7 @@ if __name__ == "__main__":
     # construct data
     # ====================================================
 
-    for seq in tqdm.tqdm(seq_pose_dict):
+    for seq in seq_pose_dict:
         # gather timestamp
         # the first image of each scene is not available
         try:

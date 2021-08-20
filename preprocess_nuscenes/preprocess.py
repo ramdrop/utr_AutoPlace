@@ -14,6 +14,16 @@ from nuscenes.utils.geometry_utils import transform_matrix
 import csv
 from scipy.spatial.transform import Rotation as R
 
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--split",
+                    type=str,
+                    default='trainval',
+                    choices=['trainval', 'test'])
+parser.add_argument("--nuscenes_datadir", type=str, default='-')
+args = parser.parse_args()
+
 CONFIG = {
     "minX": -60,
     "maxX": 60,
@@ -234,10 +244,12 @@ def state_dict(tr0, tr1, src_ts, dst_ts, dst_cnt):
     return temp
 
 
-data_root = "/LOCAL/ramdrop/dataset/nuscenes"
+data_root = args.nuscenes_datadir
+# data_root = "/LOCAL/ramdrop/dataset/nuscenes"
 # version = "v1.0-trainval"
-version = "v1.0-test"
+# version = "v1.0-test"
 
+version = "v1.0-{}".format(args.split)
 
 val = Generic(version, data_root)
 

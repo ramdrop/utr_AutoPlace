@@ -44,7 +44,7 @@ def get_sequences(path, prefix='2019'):
     sequences.sort()
     return sequences
 
-def get_frames(path, extension='.png'):
+def get_frames(path, extension='.jpg'):
     """Retrieves all the file names within a path that match the given extension.
     Args:
         path (AnyStr): path to the root/sequence/sensor/ folder
